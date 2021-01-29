@@ -3,6 +3,7 @@ import {FormBuilder, Validators} from '@angular/forms';
 import {AuthService} from '../../../core/services/auth.service';
 import {User} from '../../../core/entities/user';
 import {Router} from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-signup',
@@ -10,11 +11,20 @@ import {Router} from '@angular/router';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+  durationInSeconds=5;
+
+  openSnackBar(message) {
+    this._snackBar.open(message);
+  }
+
+
+
 
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router,
+    private _snackBar: MatSnackBar,
   ) { }
 
   userForm = this.fb.group({
@@ -45,5 +55,7 @@ export class SignupComponent implements OnInit {
     );
 
   }
+
+
 
 }

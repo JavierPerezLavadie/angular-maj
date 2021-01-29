@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {UserPartsModule} from '../shared/user-parts/user-parts.module';
 import {SharedModule} from '../shared/shared.module';
+import { MatSnackBarModule } from '@angular/material';
 
 
 
@@ -12,7 +13,8 @@ import {SharedModule} from '../shared/shared.module';
   imports: [
     DashRoutingModule,
     UserPartsModule,
-    SharedModule
+    SharedModule,
+    MatSnackBarModule
   ]
 })
 export class DashModule { }

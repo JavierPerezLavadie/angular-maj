@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {ProfileComponent} from './components/profile/profile.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+
 })
 export class DashRoutingModule { }
